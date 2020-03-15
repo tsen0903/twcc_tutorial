@@ -1,13 +1,14 @@
-import torch
-import pdb
-import torch.nn as nn
 import math
-from torch.autograd import Variable
-from torch.autograd import Function
-from torch.nn.parameter import Parameter
+import pdb
+
 import numpy as np
-from torch.autograd.function import InplaceFunction, Function
+
+import torch
+import torch.nn as nn
 import torch.nn.functional as F
+from torch.autograd import Function, Variable
+from torch.autograd.function import Function, InplaceFunction
+from torch.nn.parameter import Parameter
 
 
 def _mean(p, dim):

@@ -1,11 +1,14 @@
-import os
-import torch
 import logging.config
+import os
 import shutil
+
 import pandas as pd
 from bokeh.io import output_file, save, show
-from bokeh.plotting import figure
 from bokeh.layouts import column
+from bokeh.plotting import figure
+
+import torch
+
 
 def setup_logging(log_file='log.txt'):
     """Setup logging configuration

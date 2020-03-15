@@ -1,10 +1,12 @@
-import os
 import logging
+import os
+
+import numpy as np
+
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from torch.autograd import Function
-import numpy as np
 
 
 class vgg_cifar10_module(nn.Module):

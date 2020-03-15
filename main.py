@@ -1,27 +1,27 @@
 import argparse
+import logging
 import os
 import time
-import logging
-import torch
-import torch.nn as nn
-import torch.nn.parallel
-import torch.backends.cudnn as cudnn
-import torch.optim
-import torch.utils.data
-import models
-import imagenet_seq
-from torch.autograd import Variable
-from data import get_dataset
-from preprocess import get_transform
-from utils import *
-from datetime import datetime
 from ast import literal_eval
-from torchvision.utils import save_image
-from torchvision import datasets
-
-import torchvision.transforms as transforms
+from datetime import datetime
 
 import numpy as np
+
+import imagenet_seq
+import models
+import torch
+import torch.backends.cudnn as cudnn
+import torch.nn as nn
+import torch.nn.parallel
+import torch.optim
+import torch.utils.data
+import torchvision.transforms as transforms
+from data import get_dataset
+from preprocess import get_transform
+from torch.autograd import Variable
+from torchvision import datasets
+from torchvision.utils import save_image
+from utils import *
 
 model_names = sorted(name for name in models.__dict__
                      if name.islower() and not name.startswith("__")

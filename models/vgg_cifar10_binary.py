@@ -1,11 +1,15 @@
-import os
 import logging
+import os
+
+import numpy as np
+
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from torch.autograd import Function
-import numpy as np
-from .binarized_modules import  QuantLinear, QuantConv2d
+
+from .binarized_modules import QuantConv2d, QuantLinear
+
 
 class vgg_cifar10_quant_module(nn.Module):
 
